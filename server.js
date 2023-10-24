@@ -1,7 +1,9 @@
 const express = require('express');
 const app = express();
 const aurora = require('./lib/dbResources.js');
+const cors = require('cors');
 
+app.use(cors());
 
 app.get('/job-updates', async (req, res) =>{
     try {
